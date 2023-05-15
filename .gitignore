@@ -17,5 +17,5 @@ __pycache*
 .python-version
 *.pytest_cache
 *.vscode
-
+pics
 
