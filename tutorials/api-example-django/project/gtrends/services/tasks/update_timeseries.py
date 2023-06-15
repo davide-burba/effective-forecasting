@@ -1,8 +1,8 @@
 from typing import Tuple
 
 import pandas as pd
-from gtrends.data_sources import download_data
 from gtrends.models import TimeSeries, TSValue, TSVersion
+from gtrends.services.data_sources import download_data
 
 
 def update_all_timeseries():

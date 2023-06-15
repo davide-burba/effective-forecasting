@@ -1,5 +1,5 @@
 from gtrends import models
-from gtrends.tasks import update_timeseries
+from gtrends.services.tasks import update_timeseries
 from lightgbm import LGBMRegressor
 from rest_framework import serializers
 

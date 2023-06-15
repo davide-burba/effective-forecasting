@@ -4,7 +4,7 @@ from uuid import uuid4
 
 from django.core.files import File
 from gtrends import models
-from gtrends.ml import save_engine
+from gtrends.services.ml import save_engine
 from lightgbm import LGBMRegressor
 
 
