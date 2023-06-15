@@ -1,7 +1,7 @@
 from django.db import transaction
 from gtrends import models, serializers
-from gtrends.pipelines_ml import inference_pipeline, train_pipeline
-from gtrends.tasks import update_timeseries
+from gtrends.services.pipelines import inference_pipeline, train_pipeline
+from gtrends.services.tasks import update_timeseries
 from pytrends.exceptions import ResponseError
 from rest_framework import status, viewsets
 from rest_framework.decorators import action
