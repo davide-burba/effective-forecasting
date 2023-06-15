@@ -66,11 +66,17 @@ class DataConfigSerializer(serializers.ModelSerializer):
         targets_data = validated_data.pop("targets")
         config = models.DataConfig.objects.create(**validated_data)
 
+        new_feats = []
         for feature_data in features_data:
-            models.DataFeatures.objects.create(config=config, **feature_data)
+            obj = models.DataFeatures(config=config, **feature_data)
+            new_feats.append(obj)
+        models.DataFeatures.objects.bulk_create(new_feats)
 
+        new_targs = []
         for target_data in targets_data:
-            models.DataTargets.objects.create(config=config, **target_data)
+            obj = models.DataTargets(config=config, **target_data)
+            new_targs.append(obj)
+        models.DataTargets.objects.bulk_create(new_targs)
 
         return config
 
