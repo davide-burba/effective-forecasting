@@ -1,4 +1,4 @@
-# Api example: Django
+# Django Api example: Forecast Google Trends
 
 In this tutorial we show an example implementation of a REST API in Django for a forecasting model.
 
